@@ -23,6 +23,8 @@ RUN chmod +x scripts/*
 ENV PATH "$PATH:/code/scripts"
 
 ADD runserver.py .
+ADD alembic.ini .
 ADD modules/ modules/
+ADD migrations/ migrations/
 
 CMD ["docker-entrypoint.sh"]
