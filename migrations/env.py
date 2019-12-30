@@ -12,7 +12,7 @@ from sqlalchemy import pool
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from modules.core.settings import DATABASE_URL
-from modules.core.db import Base
+from modules.core.models import Base
 
 # Find and import all models.py files
 list_modules = [f.name for f in Path('./modules').resolve().iterdir()]

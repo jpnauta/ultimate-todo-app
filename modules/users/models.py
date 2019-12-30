@@ -1,10 +1,9 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, String
 
-from modules.core.db import Base
+from modules.core.models import BaseModel
 
 
-class User(Base):
+class User(BaseModel):
     __tablename__ = 'users'
-    id = Column(Integer, primary_key=True)
     first_name = Column(String)
     last_name = Column(String)

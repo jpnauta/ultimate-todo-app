@@ -1,10 +1,9 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, String
 
-from modules.core.db import Base
+from modules.core.models import BaseModel
 
 
-class Task(Base):
+class Task(BaseModel):
     __tablename__ = 'tasks'
-    id = Column(Integer, primary_key=True)
     name = Column(String)
     content = Column(String)
